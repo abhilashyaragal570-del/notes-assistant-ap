@@ -1,0 +1,15 @@
+My expense tracker is a Python program that saves expenses in a JSON file. It has a class called ExpenseTracker with methods to add, delete, and total expenses.
+
+The expense tracker has a menu with five options: add an expense, view all expenses, show the total per category, delete an expense, and exit. The menu keeps running in a loop until the user chooses exit.
+
+I store my Gemini API key in a .env file so it is never written inside the code. The .gitignore file tells Git to skip the .env file, so the key is not uploaded to GitHub.
+
+When the Gemini API returns a 503 error, my program waits a few seconds and retries up to three times. A 503 error means the server is busy, and it is a problem on Google's side, not in my code.
+
+I use the extract feature to type a sentence like "bought a pen for 20". Gemini turns the sentence into JSON with a name, an amount, and a category. My program reads that JSON and saves it with the tracker.
+
+To upload a project to GitHub, I run git add, git commit, and git push. Git add selects the files, git commit saves a snapshot with a message, and git push sends the snapshot to GitHub.
+
+A virtual environment keeps the libraries of one project separate from other projects. I activate it with venv\Scripts\activate, and I see (venv) at the start of the terminal line when it is active.
+
+An embedding turns a sentence into a list of numbers that captures its meaning. Sentences with similar meaning get similar numbers, and I compare them with cosine similarity to find the best match for a question.
