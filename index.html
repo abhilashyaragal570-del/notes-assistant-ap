@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Notes Assistant</title>
+</head>
+<body>
+  <h1>Notes Assistant</h1>
+  <input id="question" type="text" size="50" placeholder="Ask about my notes">
+  <button onclick="ask()">Ask</button>
+  <p id="answer"></p>
+
+  <script>
+    async function ask() {
+      const q = document.getElementById("question").value;
+      const out = document.getElementById("answer");
+      out.textContent = "Thinking...";
+      try {
+        const r = await fetch("/ask?question=" + encodeURIComponent(q));
+        const data = await r.json();
+        out.textContent = data.answer;
+      } catch (e) {
+        out.textContent = "Something went wrong. Try again later.";
+      }
+    }
+  </script>
+</body>
+</html>
