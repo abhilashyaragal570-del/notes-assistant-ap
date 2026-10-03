@@ -2,7 +2,9 @@
 
 A small FastAPI backend that answers questions from my own notes using RAG (retrieval-augmented generation) and the Gemini API.
 
-**Live demo:** https://notes-assistant-ap.onrender.com/docs
+**Live demo:** https://notes-assistant-ap.onrender.com
+
+API docs: https://notes-assistant-ap.onrender.com/docs
 
 The free server sleeps when idle, so the first request can take about a minute.
 
@@ -32,3 +34,4 @@ Returns JSON with the question and the answer.
 - Turning a RAG script into a function that a web endpoint can call
 - Keeping API keys out of Git with `.gitignore`
 - Deploying a Python API to the internet with Render
+- Building a simple HTML page that calls my API with fetch
